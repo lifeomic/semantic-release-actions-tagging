@@ -41,7 +41,7 @@ const requireEnviromentVariable = (name: string) => {
   return value;
 };
 
-export const publish = async (ctx: PublishContext) => {
+export const publish = async (pluginConfig: unknown, ctx: PublishContext) => {
   const [owner, repo] =
     requireEnviromentVariable('GITHUB_REPOSITORY').split('/');
 
